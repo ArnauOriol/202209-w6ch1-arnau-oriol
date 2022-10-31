@@ -1,9 +1,9 @@
-import Button from "./components/Button/Button";
+import ToDoList from "./components/ToDoList/ToDoList";
 
 const App = () => {
   return (
     <>
-      <Button text="hola" action={() => console.log("hola")} />
+      <ToDoList />
     </>
   );
 };
