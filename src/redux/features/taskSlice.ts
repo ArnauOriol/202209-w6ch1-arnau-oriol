@@ -33,3 +33,8 @@ const tasksSlice = createSlice({
 });
 
 export const tasksReducer = tasksSlice.reducer;
+
+export const {
+  loadTasks: loadTasksActionCreator,
+  removeTask: removeTaskActionCreator,
+} = tasksSlice.actions;
