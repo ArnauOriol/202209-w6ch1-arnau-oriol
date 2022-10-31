@@ -1,6 +1,6 @@
 interface ButtonProps {
   text: string;
-  action: () => {};
+  action: () => void;
 }
 
 const Button = ({ text, action }: ButtonProps): JSX.Element => {
