@@ -17,9 +17,9 @@ describe("Given the function tasksReducer", () => {
 
     describe("And the action loadTasks", () => {
       test("Then it should return the array of tasks received", () => {
-        const currentTaskListState = { tasks: [] };
+        const currentTaskListState = { taskList: [] };
         const expectedTaskListState = {
-          tasks: [
+          taskList: [
             {
               id: 1,
               name: "fregar platos",
