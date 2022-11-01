@@ -1,5 +1,5 @@
 import Task from "../../data/types";
-import { removeTaskActionCreator } from "../../redux/features/tasksSlice";
+import { removeTaskActionCreator } from "../../redux/features/tasksSlice/tasksSlice";
 import Button from "../Button/Button";
 import ToDoStyled from "./ToDoStyled";
 

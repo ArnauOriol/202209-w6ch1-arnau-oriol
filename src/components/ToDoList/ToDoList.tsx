@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import initialArrayOfTasks from "../../data/apiInfo";
-import { loadTasksActionCreator } from "../../redux/features/tasksSlice";
+import { loadTasksActionCreator } from "../../redux/features/tasksSlice/tasksSlice";
 import ToDo from "../ToDo/ToDo";
 
 const ToDoList = (): JSX.Element => {
