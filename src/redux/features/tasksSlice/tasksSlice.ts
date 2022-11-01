@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Task from "../../../data/types";
 
 interface TasksState {
-  tasks: Task[];
+  taskList: Task[];
 }
 
 const tasksInitialState: TasksState = {
-  tasks: [],
+  taskList: [],
 };
 
 const tasksSlice = createSlice({
@@ -18,14 +18,14 @@ const tasksSlice = createSlice({
       action: PayloadAction<Task[]>
     ): TasksState => ({
       ...currentTasksState,
-      tasks: [...action.payload],
+      taskList: [...action.payload],
     }),
     removeTask: (
       currentTasksState,
       action: PayloadAction<number>
     ): TasksState => ({
       ...currentTasksState,
-      tasks: currentTasksState.tasks.filter(
+      taskList: currentTasksState.taskList.filter(
         (task) => task.id !== action.payload
       ),
     }),

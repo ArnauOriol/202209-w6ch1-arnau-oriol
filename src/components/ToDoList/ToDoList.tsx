@@ -1,17 +1,8 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import initialArrayOfTasks from "../../data/apiInfo";
-import { loadTasksActionCreator } from "../../redux/features/tasksSlice/tasksSlice";
+import { useAppSelector } from "../../redux/hooks";
 import ToDo from "../ToDo/ToDo";
 
 const ToDoList = (): JSX.Element => {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(loadTasksActionCreator(initialArrayOfTasks));
-  }, [dispatch]);
-
-  const tasks = useAppSelector((selector) => selector.tasks.tasks);
+  const tasks = useAppSelector(({ tasks }) => tasks.taskList);
 
   return (
     <div className="container">
