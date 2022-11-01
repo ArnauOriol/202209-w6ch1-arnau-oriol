@@ -9,9 +9,11 @@ const ToDoStyled = styled.div`
     &__wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     &__checkbox {
-      width: 32px;
+      width: 28px;
+      height: 28px;
       margin-right: 10px;
     }
   }
