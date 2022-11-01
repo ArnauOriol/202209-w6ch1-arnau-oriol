@@ -1,5 +1,5 @@
 import Task from "../../data/types";
-import { removeTaskActionCreator } from "../../redux/features/taskSlice";
+import { removeTaskActionCreator } from "../../redux/features/tasksSlice";
 import Button from "../Button/Button";
 
 interface TaskProps {

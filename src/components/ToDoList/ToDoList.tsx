@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import initialArrayOfTasks from "../../data/apiInfo";
-import { loadTasksActionCreator } from "../../redux/features/taskSlice";
+import { loadTasksActionCreator } from "../../redux/features/tasksSlice";
 import ToDo from "../ToDo/ToDo";
 
 const ToDoList = (): JSX.Element => {
@@ -11,7 +11,7 @@ const ToDoList = (): JSX.Element => {
     dispatch(loadTasksActionCreator(initialArrayOfTasks));
   }, [dispatch]);
 
-  const tasks = useAppSelector((selector) => selector.tasksReducer.tasks);
+  const tasks = useAppSelector((selector) => selector.tasks.tasks);
 
   return (
     <div className="container">
