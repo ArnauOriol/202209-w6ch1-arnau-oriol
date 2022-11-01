@@ -45,5 +45,10 @@
   },
   "devDependencies": {
     "husky": "^8.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!./src/index.tsx"
+    ]
   }
 }
