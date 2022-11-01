@@ -1,6 +1,7 @@
 import Task from "../../data/types";
 import { removeTaskActionCreator } from "../../redux/features/tasksSlice";
 import Button from "../Button/Button";
+import ToDoStyled from "./ToDoStyled";
 
 interface TaskProps {
   task: Task;
@@ -8,11 +9,13 @@ interface TaskProps {
 
 const ToDo = ({ task: { id, name, done } }: TaskProps): JSX.Element => {
   return (
-    <div>
-      <h2>{name}</h2>
-      <input type="checkbox" name="" id="" />
-      <Button text="DELETE" action={() => removeTaskActionCreator(id)} />
-    </div>
+    <ToDoStyled className="task__container">
+      <h2 className="task__title">{name}</h2>
+      <div className="task__wrapper">
+        <input type="checkbox" className="task__checkbox" />
+        <Button text="Delete" action={() => removeTaskActionCreator(id)} />
+      </div>
+    </ToDoStyled>
   );
 };
 
